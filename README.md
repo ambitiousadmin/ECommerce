@@ -118,7 +118,7 @@ Always start frontend development from develop.
 
 Run:
 
-git checkout develop
+git checkout -b "develop_YourJiraBranch" 
 git pull origin develop
 
 Check the current branch:
