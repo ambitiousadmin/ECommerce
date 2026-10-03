@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 // Import the separate design styling sheet layout configuration
 import "../Register.css";
@@ -18,11 +18,16 @@ export default function Register() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleRegister = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("User Registration Payload Forwarded Successfully:", formData);
+    // Form submission handler
+  const handleRegister = (e: any) => {
+  e.preventDefault();
     
-    // Redirect standard pointer remapped targeting the Login system endpoint view
+   // Logs non-sensitive user details for local testing and debugging, 
+  // strictly excluding the password to prevent security leaks in the browser console.
+    const { name, lastName, email } = formData;
+    console.log("User Registration Data Submitted Safely:", { name, lastName, email });
+    
+    // Redirect to the Login page endpoint
     navigate("/login"); 
   };
 
