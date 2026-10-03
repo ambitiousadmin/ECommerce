@@ -1,0 +1,124 @@
+/* Container to center the registration card layout on the screen */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  padding: 20px;
+}
+
+/* 3D Card structure with initial shadow configurations and smooth dynamic transitions */
+.register-card {
+  background-color: #ffffff;
+  padding: 40px;
+  max-width: 420px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: perspective(1000px) translateZ(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* 3D hover elevation animation setup */
+.register-card:hover {
+  transform: perspective(1000px) translateY(-5px) translateZ(10px);
+  box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.15), 0 15px 15px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Input layout block formatting definitions */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  color: #475569;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* Customized input control element styles with grey sample placeholder targets */
+.form-input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ANIMATED REGISTER BUTTON STYLING */
+.submit-btn {
+  width: 100%;
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+  /* Smooth transition for background, scaling, and shadows */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Animation: Button glows and scales up slightly */
+.submit-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+}
+
+/* Click Animation: Shrinks slightly on click (3D press effect) */
+.submit-btn:active {
+  transform: scale(0.97) translateY(0);
+}
+
+/* 
+   ANIMATED LOGIN HERE LINK STYLING */
+
+.login-link {
+  color: #2563eb;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  /* Smooth color transition */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Animation: Text scales up slightly and shifts color */
+.login-link:hover {
+  color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* Smooth slide-in underline animation effect */
+.login-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #1d4ed8;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.login-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
