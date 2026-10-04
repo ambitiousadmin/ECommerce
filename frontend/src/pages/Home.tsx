@@ -144,9 +144,9 @@ export default function Home() {
             </p>
           </div>
 
-          <button className="cta-button">
+          <Link to="/categories" className="cta-button">
             Explore Products
-          </button>
+          </Link>
         </section>
       </main>
     </div>
