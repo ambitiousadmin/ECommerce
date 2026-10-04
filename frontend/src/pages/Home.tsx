@@ -16,10 +16,6 @@ export default function Home() {
         </div>
 
         <nav className="nav-links">
-          <Link to="/" className="nav-link active">
-            Home
-          </Link>
-
           <Link to="/admin" className="nav-link">
             Admin
           </Link>
