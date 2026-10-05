@@ -3,27 +3,41 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="page">
-      {/* Header */}
+      {/* Header and Top Navigation Bar */}
       <header className="navbar">
         <div className="navbar-left">
+          {/* Logo links back to Home page */}
           <Link to="/" className="logo">
             E-Commerce
           </Link>
 
+          {/* Link to Categories page */}
           <Link to="/categories" className="categories-button">
-  Categories
-</Link>
+            Categories
+          </Link>
         </div>
 
         <nav className="nav-links">
+          {/* Active link for current Home page */}
+          <Link to="/" className="nav-link active">
+            Home
+          </Link>
+
+          {/* Task Requirement: Register link added to the header with bold style layout */}
+          <Link to="/register" className="nav-link" style={{ fontWeight: "bold" }}>
+          Register
+          </Link>
+
+          {/* Link to Admin Panel */}
           <Link to="/admin" className="nav-link">
             Admin
           </Link>
         </nav>
       </header>
 
-      {/* Hero Section */}
+      {/* Main Content Area */}
       <main>
+        {/* Hero Section with Welcome Text and Action Buttons */}
         <section className="hero-section">
           <div className="hero-content">
             <span className="hero-badge">
@@ -40,17 +54,21 @@ export default function Home() {
               and enjoy a simple and convenient shopping experience.
             </p>
 
+            {/* Action buttons inside the main hero layout container */}
             <div className="hero-actions">
+              {/* Primary button to navigate to product catalog */}
               <button className="shop-button">
                 Start Shopping
               </button>
 
+              {/* Administrative link targeting store settings panel view */}
               <Link to="/admin" className="admin-button">
                 Admin Panel
               </Link>
             </div>
           </div>
 
+          {/* Decorative Section on the right side of Hero */}
           <div className="hero-decoration">
             <div className="blue-circle"></div>
 
@@ -66,7 +84,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Features */}
+        {/* Features Section explaining why to choose the store */}
         <section className="features-section">
           <div className="section-heading">
             <span>Why choose us?</span>
@@ -78,10 +96,9 @@ export default function Home() {
           </div>
 
           <div className="info-section">
+            {/* Feature 1: Quality Products */}
             <div className="info-card">
-              <div className="info-icon">
-                ✓
-              </div>
+              <div className="info-icon">✓</div>
 
               <h3>Quality Products</h3>
 
@@ -91,10 +108,9 @@ export default function Home() {
               </p>
             </div>
 
+            {/* Feature 2: Easy Shopping */}
             <div className="info-card">
-              <div className="info-icon">
-                ⚡
-              </div>
+              <div className="info-icon">⚡</div>
 
               <h3>Easy Shopping</h3>
 
@@ -104,10 +120,9 @@ export default function Home() {
               </p>
             </div>
 
+            {/* Feature 3: Secure Payments */}
             <div className="info-card">
-              <div className="info-icon">
-                🔒
-              </div>
+              <div className="info-icon">🔒</div>
 
               <h3>Secure Payments</h3>
 
@@ -119,7 +134,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Bottom CTA */}
+        {/* Bottom Call to Action Section */}
         <section className="bottom-cta">
           <div>
             <h2>Ready to explore?</h2>
@@ -129,9 +144,9 @@ export default function Home() {
             </p>
           </div>
 
-          <button className="cta-button">
+          <Link to="/categories" className="cta-button">
             Explore Products
-          </button>
+          </Link>
         </section>
       </main>
     </div>
