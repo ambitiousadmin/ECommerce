@@ -19,10 +19,6 @@ export default function Admin() {
           <Link to="/" className="nav-link">
             Home
           </Link>
-
-          <Link to="/admin" className="nav-link active">
-            Admin
-          </Link>
         </nav>
       </header>
 
