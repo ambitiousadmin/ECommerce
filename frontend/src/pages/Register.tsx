@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import Button from "../components/Button";
 // Import the separate design styling sheet layout configuration
 import "../Register.css";
 
@@ -93,9 +94,9 @@ export default function Register() {
             />
           </div>
 
-          <button type="submit" className="submit-btn">
+          <Button type="submit" className="submit-btn">
             Register
-          </button>
+          </Button>
         </form>
 
         <p style={{ marginTop: "20px", textAlign: "center", fontSize: "14px", color: "#64748b" }}>

@@ -3,6 +3,7 @@ import CheckroomIcon from "@mui/icons-material/Checkroom";
 import DevicesIcon from "@mui/icons-material/Devices";
 import FaceRetouchingNaturalIcon from "@mui/icons-material/FaceRetouchingNatural";
 import DiamondOutlinedIcon from "@mui/icons-material/DiamondOutlined";
+import Button from "../components/Button";
 
 function Categories() {
   const categories = [
@@ -67,9 +68,9 @@ function Categories() {
 
               <h2>{category.name}</h2>
 
-              <button className="category-button">
+              <Button className="category-button">
                 Explore
-              </button>
+              </Button>
             </div>
           ))}
         </section>
