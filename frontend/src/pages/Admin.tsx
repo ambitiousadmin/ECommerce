@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from "../components/Button";
 
 export default function Admin() {
   return (
@@ -10,18 +11,14 @@ export default function Admin() {
             E-Commerce
           </Link>
 
-          <button className="categories-button">
+          <Button className="categories-button">
             Categories
-          </button>
+          </Button>
         </div>
 
         <nav className="nav-links">
           <Link to="/" className="nav-link">
             Home
-          </Link>
-
-          <Link to="/admin" className="nav-link active">
-            Admin
           </Link>
         </nav>
       </header>
@@ -52,9 +49,9 @@ export default function Admin() {
               available in the store.
             </p>
 
-            <button className="card-button">
+            <Button className="card-button">
               Manage Products
-            </button>
+            </Button>
           </div>
 
           <div className="admin-card">
@@ -67,9 +64,9 @@ export default function Admin() {
               order status.
             </p>
 
-            <button className="card-button">
+            <Button className="card-button">
               Manage Orders
-            </button>
+            </Button>
           </div>
 
           <div className="admin-card">
@@ -82,9 +79,9 @@ export default function Admin() {
               customer-related data.
             </p>
 
-            <button className="card-button">
+            <Button className="card-button">
               View Customers
-            </button>
+            </Button>
           </div>
 
           <div className="admin-card">
@@ -97,9 +94,9 @@ export default function Admin() {
               payment-related information.
             </p>
 
-            <button className="card-button">
+            <Button className="card-button">
               View Payments
-            </button>
+            </Button>
           </div>
         </section>
 

@@ -1,25 +1,29 @@
 import { Link } from "react-router-dom";
+import CheckroomIcon from "@mui/icons-material/Checkroom";
+import DevicesIcon from "@mui/icons-material/Devices";
+import FaceRetouchingNaturalIcon from "@mui/icons-material/FaceRetouchingNatural";
+import DiamondOutlinedIcon from "@mui/icons-material/DiamondOutlined";
+import Button from "../components/Button";
 
 function Categories() {
   const categories = [
-    {
-      name: "Fashion",
-      icon: "👕",
-    },
-    {
-      name: "Electronics",
-      icon: "💻",
-    },
-    {
-      name: "Beauty",
-      icon: "💄",
-    },
-    {
-      name: "Jewellery",
-      icon: "💎",
-    },
-  ];
-
+  {
+    name: "Fashion",
+    icon: <CheckroomIcon sx={{ fontSize: 55 }} />,
+  },
+  {
+    name: "Electronics",
+    icon: <DevicesIcon sx={{ fontSize: 55 }} />,
+  },
+  {
+    name: "Beauty",
+    icon: <FaceRetouchingNaturalIcon sx={{ fontSize: 55 }} />,
+  },
+  {
+    name: "Jewellery",
+    icon: <DiamondOutlinedIcon sx={{ fontSize: 55 }} />,
+  },
+];
   return (
     <div className="page">
       {/* Header */}
@@ -64,9 +68,9 @@ function Categories() {
 
               <h2>{category.name}</h2>
 
-              <button className="category-button">
+              <Button className="category-button">
                 Explore
-              </button>
+              </Button>
             </div>
           ))}
         </section>
