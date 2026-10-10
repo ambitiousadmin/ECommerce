@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Admin from "./pages/Admin";
 import Categories from "./pages/Categories";
 import Register from "./pages/Register";
+import Login from "./pages/Login";
 import "./App.css";
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
 
         {/* Dedicated endpoint mapping for your standalone user registration module */}
         <Route path="/register" element={<Register />} />
+
+        <Route path="/login" element={<Login />} />
 
         <Route path="/categories" element={<Categories />} />
 
